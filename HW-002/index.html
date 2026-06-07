@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body{
+        min-height: 100vh;
+        padding: 40px 20px;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      .title {
+        font-size: 1.2rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 8px;
+        letter-spacing: .01em;
+      }
+      .subtitle {
+          font-size: 0.8rem;
+        font-weight: 300;
+        line-height: 1.6;
+      }
+
+      .item-1 {
+        padding: 24px 28px;
+        grid-column: 1 / span 3;
+        background-color: #222222;
+        background-image:
+          linear-gradient(#333333 1px, transparent 1px),
+          linear-gradient(90deg, #333333 1px, transparent 1px);
+        background-size: 15px 15px;
+        border: 2px solid rgb(60, 55, 55);
+        border-radius: 10px;
+      }
+
+      .item-2,
+      .item-7,
+      .item-10,
+      .item-9 {
+        padding: 24px 28px;
+        background-color: #f9f9f9;
+        background-image:
+          linear-gradient(#e0e0e0 1px, transparent 1px),
+          linear-gradient(90deg, #e0e0e0 1px, transparent 1px);
+        background-size: 20px 20px;
+        border: 2px solid rgb(60, 55, 55);
+        border-radius: 10px;
+      }
+
+      .item-3 {
+        padding: 24px 28px;
+        background-color: rgb(100, 20, 191);
+        grid-column: 1 / span 4;
+        border: 2px solid rgb(60, 55, 55);
+        border-radius: 10px;
+      }
+      .item-4 {
+        position: relative;
+       padding: 24px 28px;
+        grid-column: 1 / span 2;
+        background-color: #f9f9f9;
+        background-image:
+          linear-gradient(#e0e0e0 1px, transparent 1px),
+          linear-gradient(90deg, #e0e0e0 1px, transparent 1px);
+        background-size: 20px 20px;
+        border: 2px solid rgb(60, 55, 55);
+        border-radius: 10px;
+      }
+
+      .item-4 .badge-new {
+        position: absolute;
+        top: -12px;
+        left: -15px;
+        background-color: #437c3f;
+        color: white;
+        padding: 4px 12px;
+        font-size: 12px;
+        font-weight: bold;
+
+        transform: rotate(-15deg);
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      }
+      .item-5 {
+        padding: 24px 28px;
+        grid-column: 3 / span 2;
+        background-color: #f9f9f9;
+        background-image:
+          linear-gradient(#e0e0e0 1px, transparent 1px),
+          linear-gradient(90deg, #e0e0e0 1px, transparent 1px);
+        background-size: 20px 20px;
+        border: 2px solid rgb(60, 55, 55);
+        border-radius: 10px;
+      }
+      .item-6 {
+       padding: 24px 28px;
+        background-color: #f9f9f9;
+        background-image:
+          linear-gradient(#e0e0e0 1px, transparent 1px),
+          linear-gradient(90deg, #e0e0e0 1px, transparent 1px);
+        background-size: 20px 20px;
+        grid-column: 1 / span 3;
+        border: 2px solid rgb(60, 55, 55);
+        border-radius: 10px;
+      }
+
+      .item-8 {
+        padding: 24px 28px;
+        grid-column: 1 / span 2;
+        background-color: #f9f9f9;
+        background-image:
+          linear-gradient(#e0e0e0 1px, transparent 1px),
+          linear-gradient(90deg, #e0e0e0 1px, transparent 1px);
+        background-size: 20px 20px;
+        border: 2px solid rgb(60, 55, 55);
+        border-radius: 10px;
+      }
+
+      .item-11 {
+        padding: 24px 28px;
+        background-color: #f9f9f9;
+        background-image:
+          linear-gradient(#e0e0e0 1px, transparent 1px),
+          linear-gradient(90deg, #e0e0e0 1px, transparent 1px);
+        background-size: 20px 20px;
+        grid-column: 1 / span 4;
+        border: 2px solid rgb(60, 55, 55);
+        border-radius: 10px;
+      }
+
+      .item-1 .title,
+      .item-1 .subtitle,
+      .item-3 .title,
+      .item-3 .subtitle {
+        color: #f9f9f9;
+        font-family: "Times New Roman", Times, serif;
+      }
+
+      .item-2 .title,
+      .item-2 .subtitle,
+      .item-4 .title,
+      .item-4 .subtitle .item-5 .title,
+      .item-5 .subtitle,
+      .item-6 .title,
+      .item-6 .subtitle .item-7 .title,
+      .item-7 .subtitle .item-8 .title,
+      .item-8 .subtitle,
+      .item-9 .title,
+      .item-9 .subtitle .item-10 .title,
+      .item-10 .subtitle,
+      .item-11 .title,
+      .item-11 .subtitle {
+        color: #101010;
+        font-family: "Times New Roman", Times, serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item-1">
+        <div class="info">
+          <h2 class="title">CSS Grid Layout</h2>
+          <p class="subtitle">
+            This site is collection of examples, video and other information to
+            help you lern CSS grid Layout, Developed and maintained
+            <ins>Rachel Andrew.</ins>
+          </p>
+        </div>
+      </div>
+      <div class="item-2">
+        <div class="info">
+          <h2 class="title">The Video Tutorial</h2>
+          <p class="subtitle">
+            A collection of short and to the point videos, demonstrating various
+            parts of the CSS Grid Layout specification
+          </p>
+        </div>
+      </div>
+      <div class="item-3">
+        <div class="info">
+          <h2 class="title">Get Started Guide</h2>
+          <p class="subtitle">
+            A structured guide to resources that will help you to start learning
+            CSS Grid Layout.
+          </p>
+        </div>
+      </div>
+      <div class="item-4">
+        <div class="info">
+          <span class="badge-new">New!</span>
+          <h2 class="title">The Examples</h2>
+          <p class="subtitle">
+            Small examples of the CSS Grid Layout specification. Each
+            demonstrates a feature of the specification. Includes new Subgrid
+            examples!
+          </p>
+        </div>
+      </div>
+      <div class="item-5">
+        <div class="info">
+          <h2 class="title">Patterns</h2>
+          <p class="subtitle">
+            Grab & Go. A set of example patterns with fallbacks for older
+            browsers.
+          </p>
+        </div>
+      </div>
+      <div class="item-6">
+        <div class="info">
+          <h2 class="title">Resources</h2>
+          <p class="subtitle">
+            More links to articles, tutorials and conference presentations that
+            will help you learn CSS Grid Layout.
+          </p>
+        </div>
+      </div>
+      <div class="item-7">
+        <div class="info">
+          <h2 class="title">CSS Layout News</h2>
+          <p class="subtitle">
+            Sign up for a weekly email full of CSS Layout links and resources.
+          </p>
+        </div>
+      </div>
+      <div class="item-8">
+        <div class="info">
+          <h2 class="title">Questions?</h2>
+          <p class="subtitle">
+            Ask me anything about Grid Layout over at my GitHub Grid AMA.
+          </p>
+        </div>
+      </div>
+      <div class="item-9">
+        <div class="info">
+          <h2 class="title">About CSS Grid</h2>
+          <p class="subtitle">What even is this? Do I need to care?</p>
+        </div>
+      </div>
+      <div class="item-10">
+        <div class="info">
+          <h2 class="title">News</h2>
+          <p class="subtitle">Infrequent updates on this site,</p>
+        </div>
+      </div>
+      <div class="item-11">
+        <div class="info">
+          <h2 class="title">GridBugs!</h2>
+          <p class="subtitle">
+            If you have found a bug in a browser, or want to see what we have
+            found so far, check out this site.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
